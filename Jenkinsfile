@@ -12,17 +12,17 @@ pipeline {
                 sh "./prime.py"
             }
         }
-        stage('Correct Test Cases') {
-            steps {
-                sh "chmod u+x unit_1.py"
-                sh "./unit_1.py"
-            }
-        }
-        // stage('Test Code Failed') {
+        // stage('Correct Test Cases') {
         //     steps {
-        //         sh "chmod u+x unit_2.py"
-        //         sh "./unit_2.py"
+        //         sh "chmod u+x unit_1.py"
+        //         sh "./unit_1.py"
         //     }
         // }
+        stage('Wrong Test Cases') {
+            steps {
+                sh "chmod u+x unit_2.py"
+                sh "./unit_2.py"
+            }
+        }
     } 
 }
