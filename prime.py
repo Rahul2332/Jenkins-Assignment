@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def is_prime(num):
     if num > 1:
         # Iterate from 2 to n / 2
